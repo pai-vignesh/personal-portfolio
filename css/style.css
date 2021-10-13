@@ -105,11 +105,11 @@ img {
 .btn-1:after {
   border-radius: 30px;
 }
-.effect-wrap .effect{
+.effect-wrap .effect {
   position: absolute;
   z-index: -1;
 }
-.effect-1{
+.effect-1 {
   width: 30px;
   height: 30px;
   border: 4px solid #8a49ff;
@@ -117,7 +117,7 @@ img {
   bottom: 10%;
   animation: spin 10s linear infinite;
 }
-.effect-2{
+.effect-2 {
   left: 3%;
   bottom: 20%;
   width: 40px;
@@ -126,30 +126,30 @@ img {
   justify-content: space-between;
   animation: topBounce 3s ease-in-out infinite;
 }
-.effect-2 div{
+.effect-2 div {
   height: 3px;
   width: 3px;
   background-color: #ff9c07;
   margin: 0 3px 8px;
 }
-.effect-3{
+.effect-3 {
   height: 180px;
   width: 180px;
   border: 25px solid var(--skin-color);
   border-radius: 50%;
   left: 50%;
-  top:-120px;
+  top: -120px;
   animation: leftBounce 3s ease-in-out infinite;
 }
-.effect-4{
+.effect-4 {
   border-top: 30px solid transparent;
   border-left: 30px solid #06d79c;
   left: 30%;
   top: 20%;
   animation: spin 15s linear infinite;
 }
-.effect-4:before{
-  content: '';
+.effect-4:before {
+  content: "";
   border-top: 30px solid transparent;
   border-left: 30px solid #06d79c;
   position: absolute;
@@ -157,7 +157,7 @@ img {
   opacity: 0.5;
   top: -25px;
 }
-.effect-5{
+.effect-5 {
   height: 50px;
   width: 50px;
   right: 10%;
@@ -166,38 +166,61 @@ img {
   justify-content: space-between;
   border-radius: 50%;
   overflow: hidden;
-  animation: spin 10s  linear infinite;
+  animation: spin 10s linear infinite;
 }
-.effect-5 div{
+.effect-5 div {
   width: 1px;
   background-color: #4dd0e1;
   height: 100%;
 }
-@keyframes spin{
-  0%{
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
 @keyframes topBounce {
-  0%,100%{
+  0%,
+  100% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(25px);
   }
-  
 }
 
 @keyframes leftBounce {
-  0%,100%{
+  0%,
+  100% {
     transform: translateX(0);
   }
-  50%{
+  50% {
     transform: translateX(25px);
   }
+}
+.section-title {
+  padding: 0 15px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h2 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  text-transform: uppercase;
+  margin: 0;
+}
+.section-title h2:before {
+  content: attr(data-heading);
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--skin-color);
 }
 /*--------------------
 header
@@ -386,4 +409,133 @@ home section
   width: 100%;
   border-radius: 50%;
   border: 10px solid transparent;
+}
+/*--------------------
+about section
+--------------------*/
+.about-section {
+  padding: 80px 0 0;
+  min-height: 100vh;
+}
+.about-section .about-img {
+  flex: 0 0 40%;
+  padding: 0 15px;
+  max-width: 40%;
+}
+.about-section .about-img .img-box {
+  padding: 15px;
+  border-radius: 5px;
+}
+.about-section .about-img .img-box img {
+  width: 100%;
+  border: 10px solid transparent;
+  border-radius: 5px;
+}
+.about-section .about-img .social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+.about-section .about-img .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  color: var(--text-black-600);
+  margin: 0 4px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.about-section .about-img .social-links a i{
+  line-height: 40px;
+}
+.about-section .about-img .social-links a:after{
+  border-radius: 50%;
+}
+.about-section .about-img .social-links a:hover{
+  color: var(--skin-color);
+}
+.about-section .about-info {
+  flex: 0 0 60%;
+  padding: 0 15px;
+  max-width: 60%;
+}
+.about-section .about-info p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  color: var(--text-black-600);
+}
+.about-section .about-info span {
+  font-weight: 600;
+}
+.about-section .about-info .btn-1 {
+  margin: 30px 20px 0 0;
+}
+.about-section .about-tabs{
+  padding: 60px 15px 50px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+}
+.about-section .about-tabs .tab-item{
+  display: inline-block;
+  margin: 0 5px 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: var(--text-black-600);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.about-section .about-tabs .tab-item:hover:not(.active){
+  opacity: 0.6;
+}
+.about-section .about-tabs .tab-item.active{
+  color: var(--skin-color);
+}
+.about-section .tab-content{
+ flex: 0 0 100%;
+ max-width: 100%;
+}
+.about-section .skills{
+  padding: 0 0 40px;
+}
+.about-section .skills .skill-item p{
+  font-size: 16px;
+  color: var(--text-black-600);
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+.about-section .skills .skill-item{
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+  margin-bottom: 40px;
+}
+.about-section .skills .skill-item .progress{
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.about-section .skills .skill-item .progress-bar{
+  background-color: var(--text-black-600);
+  height: 6px;
+  left: 7px;
+  top: 7px;
+  position: absolute;
+  border-radius: 10px;
+  
+}
+.about-section .skills .skill-item .progress-bar span{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-black-600);
+  margin-top: -40px;
 }
