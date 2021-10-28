@@ -89,6 +89,9 @@ function bodyScrollingToggle() {
 
     closeBtn.addEventListener("click", () => {
         popupToggle();
+        if (projectDetailsContainer.classList.contains("active")) {
+            popupDetailsToggle();
+        }
     })
 
     function popupToggle() {
@@ -129,8 +132,39 @@ function bodyScrollingToggle() {
         popupSlideShow();
     })
 
+    projectDetailsBtn.addEventListener("click", () => {
+        popupDetailsToggle();
+    })
+
     function popupDetails() {
+        if (!portfolioItems[itemIndex].querySelector(".portfolio-item-details")) {
+            projectDetailsBtn.style.display = "none";
+            return;
+        }
+        projectDetailsBtn.style.display = "block";
+        const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+        popup.querySelector(".pp-project-details").innerHTML = details;
+        const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML;
+        popup.querySelector(".pp-title h2").innerHTML = title;
+        const category = portfolioItems[itemIndex].getAttribute("data-category");
+        popup.querySelector(".pp-project-category").innerHTML = category.split("-").join(" ");
+
+    }
+
+    function popupDetailsToggle() {
         //todo
+        if (projectDetailsContainer.classList.contains("active")) {
+            projectDetailsBtn.querySelector("i").classList.remove("fa-minus");
+            projectDetailsBtn.querySelector("i").classList.add("fa-plus");
+            projectDetailsContainer.classList.remove("active");
+            projectDetailsContainer.style.maxHeight = 0 + "px";
+        } else {
+            projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
+            projectDetailsBtn.querySelector("i").classList.add("fa-minus");
+            projectDetailsContainer.classList.add("active");
+            projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
+            popup.scrollTo(0, projectDetailsContainer.offsetTop);
+        }
     }
 
 
