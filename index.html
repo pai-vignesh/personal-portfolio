@@ -8,6 +8,51 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/skins/color-1.css" />
+
+    <!-- style switcher -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-1"
+      href="css/skins/color-1.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-2"
+      href="css/skins/color-2.css"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-3"
+      href="css/skins/color-3.css"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-4"
+      href="css/skins/color-4.css"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-5"
+      href="css/skins/color-5.css"
+      disabled
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/style-switcher.css" />
   </head>
   <body>
     <!-- Header start -->
@@ -15,7 +60,7 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="logo">
-            <a href="index.html">W</a>
+            <a href="index.html">V</a>
           </div>
           <div class="hamburger-btn outer-shadow hover-in-shadow">
             <span></span>
@@ -30,25 +75,46 @@
       <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
       <div class="nav-menu-inner">
         <ul>
-          <li><a href="#" class="inner-shadow active">home</a></li>
-          <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-          <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
           <li>
-            <a href="#" class="outer-shadow hover-in-shadow">portfolio</a>
+            <a href="#home" class="link-item inner-shadow active">home</a>
           </li>
           <li>
-            <a href="#" class="outer-shadow hover-in-shadow">testimonial</a>
+            <a href="#about" class="link-item outer-shadow hover-in-shadow"
+              >about</a
+            >
           </li>
-          <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+          <li>
+            <a href="#services" class="link-item outer-shadow hover-in-shadow"
+              >services</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio" class="link-item outer-shadow hover-in-shadow"
+              >portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonial"
+              class="link-item outer-shadow hover-in-shadow"
+              >testimonial</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="link-item outer-shadow hover-in-shadow"
+              >contact</a
+            >
+          </li>
         </ul>
       </div>
       <!--copyright text-->
       <p class="copyright-text">&copy;2021 Vignesh Pai</p>
     </nav>
+    <div class="fade-out-effect"></div>
     <!-- navigation menu end-->
 
     <!-- home section start-->
-    <section class="home-section section">
+    <section class="home-section section active" id="home">
       <!-- effect wrap start-->
       <div class="effect-wrap">
         <div class="effect effect-1"></div>
@@ -104,7 +170,9 @@
             <p>Hello</p>
             <h2>I'm Vignesh Pai</h2>
             <h1>Software Engineer and App Developer</h1>
-            <a href="#" class="outer-shadow hover-in-shadow btn-1"
+            <a
+              href="#about"
+              class="link-item outer-shadow hover-in-shadow btn-1"
               >More about me</a
             >
           </div>
@@ -124,7 +192,7 @@
     <!-- home section end-->
 
     <!-- about section start-->
-    <section class="about-section section">
+    <section class="about-section section" id="about">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -168,7 +236,11 @@
             <a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow"
               >Download CV</a
             >
-            <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire me</a>
+            <a
+              href="#contact"
+              class="link-item btn-1 outer-shadow hover-in-shadow"
+              >Hire me</a
+            >
           </div>
         </div>
         <!-- about tabs start-->
@@ -330,7 +402,7 @@
     <!-- about section end-->
 
     <!-- service section start-->
-    <section class="service-section section">
+    <section class="service-section section" id="services">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -417,7 +489,7 @@
 
     <!-- portfolio section start-->
 
-    <section class="portfolio-section section">
+    <section class="portfolio-section section" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -809,7 +881,7 @@
     <!-- portfolio section end-->
 
     <!--testimonial section start-->
-    <section class="testimonial-section section">
+    <section class="testimonial-section section" id="testimonial">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -876,7 +948,7 @@
     <!--testimonial section end-->
 
     <!--contact section start-->
-    <section class="contact-section section">
+    <section class="contact-section section" id="contact">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -941,13 +1013,19 @@
                 </div>
                 <div class="w-50">
                   <div class="input-group outer-shadow hover-in-shadow">
-                    <textarea class="input-control" placeholder="Message"></textarea>
+                    <textarea
+                      class="input-control"
+                      placeholder="Message"
+                    ></textarea>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="submit-btn">
-                  <button type="submit" class="btn-1 outer-shadow hover-in-shadow">
+                  <button
+                    type="submit"
+                    class="btn-1 outer-shadow hover-in-shadow"
+                  >
                     Send message
                   </button>
                 </div>
@@ -968,37 +1046,10 @@
             <h2>Personal Portfolio</h2>
             <p>
               Category -
-              <span class="pp-project-category">Web Application</span>
+              <span class="pp-project-category"></span>
             </p>
           </div>
           <div class="pp-project-details">
-            <div class="row">
-              <div class="description">
-                <h3>Project Breif:</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
-                  consequuntur voluptatum laborum numquam blanditiis harum
-                  quisquam eius sed odit fugiat iusto fuga praesentium optio,
-                  eaque rerum! Provident similique accusantium nemo autem.
-                  Veritatis obcaecati tenetur iure eius earum ut molestias
-                  architecto voluptate aliquam nihil, eveniet aliquid culpa
-                  officia aut! Impedit sit sunt quaerat, odit, tenetur error,
-                  harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                  quia.
-                </p>
-              </div>
-              <div class="info">
-                <h3>Project Info</h3>
-                <ul>
-                  <li>Date - <span>2020</span></li>
-                  <li>Tools - <span> html,css,Javascript</span></li>
-                  <li>
-                    Web - <span><a href="#">www.domain.com</a></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1014,7 +1065,7 @@
             alt="img"
             class="pp-img outer-shadow"
           />
-          <div class="pp-counter">1 of 6</div>
+          <div class="pp-counter"></div>
         </div>
         <div class="pp-loader">
           <div></div>
@@ -1025,6 +1076,28 @@
       </div>
     </div>
     <!-- portfolio popup end-->
+
+    <!-- style-swticher start -->
+
+    <div class="style-switcher outer-shadow">
+      <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon outer-shadow hover-in-shadow">
+        <i class="fas"></i>
+      </div>
+
+      <h4>Theme colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+
+    <!-- style-swticher end -->
 
     <!-- main js -->
     <script src="js/main.js"></script>
